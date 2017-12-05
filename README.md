@@ -14,6 +14,7 @@ matplotlib
 mlxtend
 tensorflow
 nltk
+numpy
 pandas
 pycrfsuite
 sklearn
@@ -21,6 +22,8 @@ sklearn
 
 this also uses the `keras` attention layer by nigeljyng implemented here:
 https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3
+
+NB: as of late nov, `keras 2.08` has compatibility issues with `keras-contrib`. so i am using `keras 2.04` for now.
 
 ## purpose
 
