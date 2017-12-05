@@ -41,21 +41,23 @@ network will be modified from the above by using a **CRF layer** for NER and an 
 ## current sample output (dec 05)
 
 ```
-ner.predict("do you have any flights from london leaving tomorrow?", debug=True)
-['do', 'you', 'have', 'any', 'flights', 'from', 'london', 'leaving', 'tomorrow']
+ner.predict("do you have any flights from Seoul leaving tomorrow?", debug=True)
+['do', 'you', 'have', 'any', 'flights', 'from', 'seoul', 'leaving', 'tomorrow']
 ['O', 'O', 'O', 'O', 'O', 'O', 'GEO', 'O', 'DAT']
-({'DAT': 'tomorrow', 'GEO': 'london'}, 'reqInfo', 'nan')
+({'DAT': 'tomorrow', 'GEO': 'seoul'}, 'reqInfo', 'day')
 
-ner.predict("are there any flights to Hong Kong at 5:30?", debug=True)
-['are', 'there', 'any', 'flights', 'to', 'hong', 'kong', 'at', '5:30']
-['O', 'O', 'O', 'O', 'O', 'GEO', 'O', 'O', 'TIM']
-({'GEO': 'hong', 'TIM': '5:30'}, 'reqInfo', 'location')
+ner.predict("are there any flights to London at 5:30?", debug=True)
+['are', 'there', 'any', 'flights', 'to', 'london', 'at', '5:30']
+['O', 'O', 'O', 'O', 'O', 'GEO', 'O', 'TIM']
+({'GEO': 'london', 'TIM': '5:30'}, 'reqInfo', 'time')
 
-ner.predict("let's do the 11:20 flight to Tokyo", debug=True)
-['lets', 'do', 'the', '11:20', 'flight', 'to', 'tokyo']
-['O', 'O', 'O', 'TIM', 'O', 'O', 'GEO']
-({'GEO': 'tokyo', 'TIM': '11:20'}, 'state', 'location')
+ner.predict("let's do the 11:20 am flight to Tokyo", debug=True)
+['lets', 'do', 'the', '11:20', 'am', 'flight', 'to', 'tokyo']
+['O', 'O', 'O', 'TIM', 'TIM', 'O', 'O', 'GEO']
+({'GEO': 'tokyo', 'TIM': '11:20 am'}, 'state', 'enum')
 ```
+
+a trained model is included so you can test out new results using `class_based_decoder.ipynb` in the `decoding` directory.
 
 ## todo
 
@@ -111,9 +113,9 @@ test accuracy  0.885750962773
 ## `iNERt` results
 
 ```
-entity accuracy		0.9959235872432259
-speech_act accuracy	0.8960205391527599
-topic accuracy		0.8241335044929397
+entity accuracy		0.9968102073365231
+speech_act accuracy	0.9059278350515464
+topic accuracy		0.9072164948453608
 ```
 
-NB: with adjustments to hyper-parameters, prototype versions of this network have been shown to meet or beat all baselines at once. more tuning is necessary.
+keeping in mind the implementational flaws above, the model accuracy exceeds all baselines above.
