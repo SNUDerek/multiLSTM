@@ -38,6 +38,25 @@ adapt the CoNLL 2003 NER demo with a secondary output to train intent classifica
 
 network will be modified from the above by using a **CRF layer** for NER and an attention layer for sentence vectorization before classification along multiple axes (speech act, topic).
 
+## current sample output (dec 05)
+
+```
+ner.predict("do you have any flights from london leaving tomorrow?", debug=True)
+['do', 'you', 'have', 'any', 'flights', 'from', 'london', 'leaving', 'tomorrow']
+['O', 'O', 'O', 'O', 'O', 'O', 'GEO', 'O', 'DAT']
+({'DAT': 'tomorrow', 'GEO': 'london'}, 'reqInfo', 'nan')
+
+ner.predict("are there any flights to Hong Kong at 5:30?", debug=True)
+['are', 'there', 'any', 'flights', 'to', 'hong', 'kong', 'at', '5:30']
+['O', 'O', 'O', 'O', 'O', 'GEO', 'O', 'O', 'TIM']
+({'GEO': 'hong', 'TIM': '5:30'}, 'reqInfo', 'location')
+
+ner.predict("let's do the 11:20 flight to Tokyo", debug=True)
+['lets', 'do', 'the', '11:20', 'flight', 'to', 'tokyo']
+['O', 'O', 'O', 'TIM', 'O', 'O', 'GEO']
+({'GEO': 'tokyo', 'TIM': '11:20'}, 'state', 'location')
+```
+
 ## todo
 
 1. edit preprocessing scripts to enforce train-test split across tests
