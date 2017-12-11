@@ -20,8 +20,10 @@ pycrfsuite
 sklearn
 ```
 
-this also uses the `keras` attention layer by nigeljyng implemented here:
-https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 - rename to `attention.py` and add to relevant directories. ( *my implementation not included as it is derivative of this gist* ) EDIT: this fork by rmdort fixes TF & Keras compatibility: https://gist.github.com/rmdort/596e75e864295365798836d9e8636033
+this also uses a `keras` attention layer that i adapted from the gist by nigeljyng implemented here:
+https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 - rename to `attention.py` and add to relevant directories. ( *my implementation not included as it is derivative of this gist with fixes for tensorflow compatibility and per-timestep output* ) 
+
+EDIT: this fork by rmdort fixes TF & Keras compatibility: https://gist.github.com/rmdort/596e75e864295365798836d9e8636033
 
 NB: as of late nov, `keras 2.08` has compatibility issues with `keras-contrib`. so i am using `keras 2.04` for now.
 
