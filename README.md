@@ -21,7 +21,9 @@ sklearn
 ```
 
 this also uses a `keras` attention layer that i adapted from the gist by nigeljyng implemented here:
-https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 - rename to `attention.py` and add to relevant directories. ( *my implementation not included as it is derivative of this gist with fixes for tensorflow compatibility and per-timestep output* ) 
+https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 
+
+rename this file to `attention.py` and add to relevant directories - only works with `Theano` backend; see comments for possible TensorFlow fix. ( *my implementation not included as it is derivative of this gist with fixes for tensorflow compatibility and per-timestep output* ) 
 
 EDIT: this fork by rmdort fixes TF & Keras compatibility: https://gist.github.com/rmdort/596e75e864295365798836d9e8636033
 
