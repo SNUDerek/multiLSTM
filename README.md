@@ -122,3 +122,9 @@ topic accuracy		0.9072164948453608
 ```
 
 keeping in mind the implementational flaws above, the model accuracy exceeds all baselines above.
+
+## other implementations, related links
+
+i stumbled upon this keras implementation of a similar task using the ATIS data:
+
+https://github.com/yvchen/JointSLU
