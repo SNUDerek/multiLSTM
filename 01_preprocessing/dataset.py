@@ -30,7 +30,7 @@ def get_vocab(sents, maxvocab=25000, stoplist=[], verbose=False):
     if verbose:
         print("\ntrunc vocab size:", len(sorted_vocab), '\n')
     vocab_dict = {k: v+1 for v, k in enumerate(sorted_vocab)}
-    vocab_dict['UNK'] = maxvocab-1
+    vocab_dict['UNK'] = len(sorted_vocab)+1
     vocab_dict['PAD'] = 0
     inv_vocab_dict = {v: k for k, v in vocab_dict.items()}
     return vocab_dict, inv_vocab_dict
