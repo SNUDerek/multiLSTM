@@ -21,7 +21,7 @@ sklearn
 ```
 
 this also uses the `keras` attention layer by nigeljyng implemented here:
-https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3
+https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 - rename to `attention.py` and add to relevant directories. ( *my implementation not included as it is derivative of this gist* )
 
 NB: as of late nov, `keras 2.08` has compatibility issues with `keras-contrib`. so i am using `keras 2.04` for now.
 
