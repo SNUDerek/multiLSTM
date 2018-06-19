@@ -1,5 +1,14 @@
 # multiLSTM
 
+## updates and todo
+
+currently working on using the 2017 benchmark from snips:  
+https://github.com/snipsco/nlu-benchmark
+
+it's not training well, but it may be a preprocessing error.
+
+(and yes, i know that SNIPs says the 2017 data is *only* for slot-filling, not intended for intent detection)
+
 ## tentative name: `iNERt network`
 
 for **i**ntent, **N**amed **E**ntity **R**ecognition, and **t**opic identification network
@@ -19,6 +28,8 @@ pandas
 pycrfsuite
 sklearn
 ```
+
+https://github.com/cbaziotis/keras-utilities
 
 this also uses a `keras` attention layer that i adapted from the gist by nigeljyng implemented here:
 https://gist.github.com/nigeljyng/37552fb4869a5e81338f82b338a304d3 
