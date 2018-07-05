@@ -11,6 +11,8 @@ it's not training well, but it may be a preprocessing error.
 also, want to implement the original fork of the attention layer, from `cbaziotis/keras-utilities`  
 so that i can make this a complete repo under MIT license in good faith (without copying or referencing unlicensed gist)
 
+also, the NER evaluation should use per-label F1 scores. will add soon.
+
 ## tentative name: `iNERt network`
 
 for **i**ntent, **N**amed **E**ntity **R**ecognition, and **t**opic identification network
