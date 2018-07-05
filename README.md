@@ -5,9 +5,11 @@
 currently working on using the 2017 benchmark from snips:  
 https://github.com/snipsco/nlu-benchmark
 
-it's not training well, but it may be a preprocessing error.
-
+it's not training well, but it may be a preprocessing error.  
 (and yes, i know that SNIPs says the 2017 data is *only* for slot-filling, not intended for intent detection)
+
+also, want to implement the original fork of the attention layer, from `cbaziotis/keras-utilities`  
+so that i can make this a complete repo under MIT license in good faith (without copying or referencing unlicensed gist)
 
 ## tentative name: `iNERt network`
 
