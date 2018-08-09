@@ -10,9 +10,8 @@ h5py==2.8.0
 Keras==2.2.0
 keras-contrib==2.0.8
 keras-utilities==0.5.0
-tensorflow==1.9.0
 numpy
-pandas
+tensorflow==1.9.0
 ```
 
 ## updates and todo
@@ -102,5 +101,5 @@ models may use layers from [keras utilities](https://github.com/cbaziotis/keras-
 
 models may use layers written *with reference to* [keras2-highway-network.py](https://gist.github.com/iskandr/a874e4cf358697037d14a17020304535) by iskandr
 
-phrase-based slot F1 score may be determined using a modified [conlleval python port](https://github.com/sighsmile/conlleval) by sighsmile (*not included due to lack of license*)
+phrase-based slot F1 score may be determined using a modified [conlleval python port](https://github.com/sighsmile/conlleval) by sighsmile (*not included due to lack of license*) or using Goo *et al.*'s `conlleval` [based script](https://github.com/MiuLab/SlotGated-SLU) in `utils.py` 
 
