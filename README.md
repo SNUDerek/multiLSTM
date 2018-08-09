@@ -14,6 +14,8 @@ numpy
 tensorflow==1.9.0
 ```
 
+for installation of `keras-contrib` see [their repo](https://github.com/keras-team/keras-contrib)
+
 ## updates and todo
 
 this is a complete rewrite using ATIS dataset, see the `old_version` branch for the original version
