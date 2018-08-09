@@ -52,7 +52,7 @@ https://github.com/yvchen/JointSLU
 
 ## results
 
-well, our intent accuracy is **95.5%**, which beats out Goo *et al.* 2018's reported score of **94.1%**. but our F1 score using the phrase-based `conlleval` approach is substantially lower. of course we can tune a lot of things here.
+well, our intent accuracy is **95.5%**, which beats out Goo *et al.* 2018's reported score of 94.1%. but our F1 score of 92.22 using the phrase-based `conlleval` approach is substantially lower than their **95.2**. of course we can tune a lot of things here.
 
 note: the `conlleval` python script is not included, see **licensing** for link to source file.
 
