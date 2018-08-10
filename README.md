@@ -27,7 +27,7 @@ https://github.com/snipsco/nlu-benchmark
 
 - `00_data_processing-test.ipynb` for processing ATIS data
 - `01_keras_modeling-test.ipynb` for training model
-- `02_keras_demo.ipynb` for decoding new sentences
+- `02_keras_demo.ipynb` for decoding new sentences on trained model
 - `snips_00_preprocessing.ipynb` for processing SNIPS data
 
 ## background
@@ -53,23 +53,46 @@ https://github.com/yvchen/JointSLU
 
 ## results
 
-well, our intent accuracy is **95.5%**, which beats out Goo *et al.* 2018's reported score of 94.1%. but our F1 score of 92.22 using the phrase-based `conlleval` approach is substantially lower than their **95.2**. of course we can tune a lot of things here.
+our intent accuracy is **96.3%**, which beats out Goo *et al.* 2018's reported score of 94.1%. 
+
+our slot F1 score of 93.71 using the phrase-based `conlleval` approach, substantially lower than their 95.2. of course we can tune a lot of things here or try the greedy LSTM.
 
 note: the `conlleval` python script is not included, see **licensing** for link to source file.
 
 ```
 # TRAIN RESULTS
 
-INTENT F1 :   0.98847528431578  (weighted)
-INTENT ACC:   0.9908441268423404
-SLOT   F1 :   0.9899884882746111  (weighted, labels only)
+INTENT F1 :   0.9958062755602081  (weighted)
+INTENT ACC:   0.9966502903081733
+SLOT   F1 :   0.9943244981289089  (weighted, labels only)
 
 # TEST RESULTS
 
-INTENT F1 :   0.9493525340928776  (weighted)
-INTENT ACC:   0.9552071668533034
-SLOT   F1 :   0.9404732064160775  (weighted, labels only)
-CONLLEVAL :   92.22
+INTENT F1 :   0.9573853410886499  (weighted)
+INTENT ACC:   0.9630459126539753
+SLOT   F1 :   0.9508826933073504  (weighted, labels only)
+CONLLEVAL :   93.71
+```
+
+## examples
+
+we can use the decoding script to load the saved model and weights, and so some decoding:
+
+```
+query: looking for direct flights from Chicago to LAX
+slots:
+{'connect': 'direct', 'fromloc.city_name': 'chicago', 'toloc.city_name': 'lax'}
+intent: atis_flight
+
+query: give me flights and fares from New York to Dallas
+slots:
+{'fromloc.city_name': 'new york', 'toloc.city_name': 'dallas'}
+intent: atis_flight#atis_airfare
+
+query: i want a first class flight to los angeles
+slots:
+{'class_type': 'first class', 'toloc.city_name': 'los angeles'}
+intent: atis_flight
 ```
 
 ## references
