@@ -78,7 +78,7 @@ CONLLEVAL :   93.71
 
 ## examples
 
-we can use the decoding script to load the saved model and weights, and so some decoding:
+we can use the decoding script to load the saved model and weights, and decode new sentences:
 
 ```
 query: looking for direct flights from Chicago to LAX
