@@ -23,6 +23,8 @@ this is a complete rewrite using ATIS dataset, see the `old_version` branch for 
 currently working on using the 2017 benchmark from snips:  
 https://github.com/snipsco/nlu-benchmark
 
+please be aware that i am not super-active on github and i provide my code in an 'as-is' state. as this is not written to be used for commercial purposes, i am not concerned about bug-fixing pull requests as much as comments regarding theoretical issues.
+
 ## files
 
 - `00_data_processing-test.ipynb` for processing ATIS data
@@ -36,7 +38,7 @@ A conversational spoken dialog system (SDS) traditionally consists of a pipeline
 
 For *task-oriented* conversational agents ("chatbots"), the slot-filling paradigm is frequently used as seen in Lui & Lane 2016 and Goo *et al.* 2018, among others. This approach breaks down the NLU task into two primary sub-tasks, *slot-filling* (SF) and *intent detection\/determination* (ID). 
 
-In this approach, a user's preferences are assigned to a number of **slots**, which the dialog manager attempts to fill with the **value** of the user's preference (in a programming analogy, a slot is a variable and the value is a variable's assigned value). These slots can be completely open, restricted to a set of types (such as days of the week, restaurant types, flight classes such as *first class* or *economy*), or boolean in value. T
+In this approach, a user's preferences are assigned to a number of **slots**, which the dialog manager attempts to fill with the **value** of the user's preference (in a programming analogy, a slot is a variable and the value is a variable's assigned value). These slots can be completely open, restricted to a set of types (such as days of the week, restaurant types, flight classes such as *first class* or *economy*), or boolean in value.
 
 Along with slots, the NLU must also classify **intent**. Intent captures the goal or purpose of a user's utterance. It can be roughly thought of as analogous to a programming *function* that takes a number of slots as arguments. Together, the intent and slots provide a summary of the user's utterance that can be used to determine how the chatbot responds.
 
@@ -44,7 +46,7 @@ The slot-filling and intent detection tasks can be handled separately, for examp
 
 ## purpose
 
-This model demonstrates an example of a joint NLU model, borrowing concepts from a number of current papers on NLU and the related named entity recognition task. 
+This model demonstrates a Frankenstein example of a joint NLU model, borrowing concepts from a number of current papers on joint SLU/NLU and the related named entity recognition (NER) task. It makes use of convolutional sub-word embeddings + pretrained word embeddings, a biLSTM-CRF sequence model for sequence tagging plus an attention-based weighted vector for intent classification. For details, see the model training notebook.
 
 ## dataset
 
