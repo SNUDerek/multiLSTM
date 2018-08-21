@@ -120,6 +120,8 @@ available: https://arxiv.org/pdf/1505.00387.pdf
 
 ## licensing
 
+i don't want to commit to a license but in the spirit of the ATIS corpus and the above papers, i provide this code for research purposes. an attribution would be nice (Derek Hommel) if you do something cool. feel free to contact me at dsh9470@snu.ac.kr.
+
 models may use layers from [keras-contrib](https://github.com/keras-team/keras-contrib) released under the MIT License
 
 models may use layers from [keras utilities](https://github.com/cbaziotis/keras-utilities) by cbaziotis released under the MIT License
